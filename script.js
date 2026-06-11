@@ -336,8 +336,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalMetrics = document.getElementById("modal-metrics");
 
   function openProjectModal(projectId) {
+    if (typeof projectId !== "string" || !Object.prototype.hasOwnProperty.call(caseStudies, projectId)) {
+      return;
+    }
     const data = caseStudies[projectId];
-    if (!data) return;
 
     // Populating modal fields
     modalTag.textContent = data.tag;
@@ -349,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalOverview.textContent = data.overview;
 
     // Challenges list rendering
-    modalChallenges.innerHTML = "";
+    modalChallenges.replaceChildren();
     data.challenges.forEach((challenge) => {
       const li = document.createElement("li");
       li.textContent = challenge;
@@ -357,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Metrics list rendering
-    modalMetrics.innerHTML = "";
+    modalMetrics.replaceChildren();
     data.metrics.forEach((metric) => {
       const li = document.createElement("li");
       li.textContent = metric;
@@ -443,8 +445,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function openLightbox(index) {
-    const photo = photoData[index];
-    if (!photo) return;
+    const parsedIndex = Number(index);
+    if (isNaN(parsedIndex) || parsedIndex < 0 || parsedIndex >= photoData.length) {
+      return;
+    }
+    const photo = photoData[parsedIndex];
     
     lightboxImg.src = photo.src;
     lightboxCaption.textContent = photo.title;
@@ -525,17 +530,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
   const formToast = document.getElementById("form-toast");
   const btnSubmit = document.getElementById("btn-submit");
+  const btnText = btnSubmit.querySelector(".btn-text");
+  const btnSpinner = btnSubmit.querySelector(".btn-spinner");
+  const btnIcon = btnSubmit.querySelector(".btn-icon");
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     
     // Changing status representation
-    const originalText = btnSubmit.innerHTML;
     btnSubmit.disabled = true;
-    btnSubmit.innerHTML = `
-      Sending Message...
-      <svg class="spinner" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" style="animation: spin 1s linear infinite;"><circle cx="12" cy="12" r="10"></circle><path d="M4 12a8 8 0 0 1 8-8"></path></svg>
-    `;
+    btnText.style.display = "none";
+    btnIcon.style.display = "none";
+    btnSpinner.style.display = "inline-flex";
 
     const formData = new FormData(contactForm);
 
@@ -558,7 +564,9 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .finally(() => {
         btnSubmit.disabled = false;
-        btnSubmit.innerHTML = originalText;
+        btnSpinner.style.display = "none";
+        btnText.style.display = "";
+        btnIcon.style.display = "";
         
         // Close toast confirmation after 4 seconds
         setTimeout(() => {

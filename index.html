@@ -1117,8 +1117,12 @@
                         </div>
 
                         <button type="submit" class="btn-premium btn-form-submit" id="btn-submit">
-                            Send Message
-                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5"
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" style="display: none;">
+                                Sending Message...
+                                <svg class="spinner" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" style="animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-left: 8px;"><circle cx="12" cy="12" r="10"></circle><path d="M4 12a8 8 0 0 1 8-8"></path></svg>
+                            </span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5"
                                 fill="none">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
                                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
