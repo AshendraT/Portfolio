@@ -336,10 +336,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalMetrics = document.getElementById("modal-metrics");
 
   function openProjectModal(projectId) {
-    if (typeof projectId !== "string" || !Object.prototype.hasOwnProperty.call(caseStudies, projectId)) {
-      return;
-    }
-    const data = caseStudies[projectId];
+    let data = null;
+    if (projectId === "memory") data = caseStudies.memory;
+    else if (projectId === "hotel") data = caseStudies.hotel;
+    else if (projectId === "appointment") data = caseStudies.appointment;
+    else if (projectId === "food") data = caseStudies.food;
+    else if (projectId === "voice") data = caseStudies.voice;
+
+    if (!data) return;
 
     // Populating modal fields
     modalTag.textContent = data.tag;
