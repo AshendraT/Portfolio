@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO METADATA -->
+    <title>Ashendra Thavaratnam | Senior Full-Stack Engineer & Creative Photographer</title>
+    <meta name="description"
+        content="Portfolio of Ashendra Thavaratnam, a Senior Full-Stack Software Engineer, AI/ML enthusiast, Flutter developer, and Creative Photographer. Discover modern web apps, mobile solutions, and visual stories." />
+    <meta name="keywords"
+        content="Ashendra Thavaratnam, Software Engineer, Full-Stack Developer, AI/ML Enthusiast, Flutter Developer, Creative Photographer, Portfolio, SLIIT, React, Node.js" />
+    <meta name="author" content="Ashendra Thavaratnam" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ashendra Thavaratnam | Senior Full-Stack Engineer & Creative Photographer" />
+    <meta property="og:description"
+        content="Discover modern full-stack web applications, advanced mobile architectures, and minimal photography galleries." />
+    <meta property="og:image" content="./assets/Profile pic.png" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ashendra Thavaratnam | Senior Full-Stack Engineer" />
+    <meta name="twitter:description"
+        content="Discover modern full-stack web applications, advanced mobile architectures, and minimal photography galleries." />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./assets/checkmark.png" />
+
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- BACKGROUND GRID AND GLOW -->
+    <div class="grid-background" id="grid-bg"></div>
+    <div class="gradient-glow" id="mouse-glow"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-follower"></div>
+
+    <!-- PRELOADER SCREEN -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">ASHENDRA</div>
+        <div class="preloader-loader">
+            <div class="preloader-bar" id="preloader-bar"></div>
+        </div>
+        <div class="preloader-text" id="preloader-text">0%</div>
+    </div>
+
+    <!-- STICKY HEADER / NAV -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#hero" class="logo-link" id="nav-logo-link">
+                <span class="logo-text">ASHENDRA</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-item-link" id="nav-link-about">About</a></li>
+                    <li><a href="#skills" class="nav-item-link" id="nav-link-skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-item-link" id="nav-link-projects">Projects</a></li>
+                    <li><a href="#experience" class="nav-item-link" id="nav-link-experience">Experience</a></li>
+                    <li><a href="#photography" class="nav-item-link" id="nav-link-photography">Photography</a></li>
+                    <li><a href="#achievements" class="nav-item-link" id="nav-link-achievements">Achievements</a></li>
+                    <li><a href="#contact" class="nav-item-link" id="nav-link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-controls">
+                <!-- DARK/LIGHT TOGGLE -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <!-- Moon Icon (for Light mode trigger) -->
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <!-- Sun Icon (for Dark mode trigger) -->
+                    <svg class="sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+
+                <!-- HAMBURGER ICON -->
+                <button class="hamburger-toggle" id="hamburger-btn" aria-label="Open Mobile Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- SCROLL PROGRESS BAR -->
+        <div class="scroll-progress-container">
+            <div class="scroll-progress-bar" id="scroll-bar"></div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION MENU -->
+    <div class="mobile-nav-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about" id="mob-link-about">About</a></li>
+            <li><a href="#skills" id="mob-link-skills">Skills</a></li>
+            <li><a href="#projects" id="mob-link-projects">Projects</a></li>
+            <li><a href="#experience" id="mob-link-experience">Experience</a></li>
+            <li><a href="#photography" id="mob-link-photography">Photography</a></li>
+            <li><a href="#achievements" id="mob-link-achievements">Achievements</a></li>
+            <li><a href="#contact" id="mob-link-contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-content reveal active">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge">
+                            <span class="badge-dot"></span>
+                            Available for Select Projects
+                        </span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span>Designing code,</span>
+                        <span>capturing light.</span>
+                        <span class="title-glow">I'm Ashendra.</span>
+                    </h1>
+
+                    <div class="typewriter-container">
+                        <div class="typewriter-text" id="typewriter">Software Engineer</div>
+                    </div>
+
+                    <p class="hero-description">
+                        B.Sc (Hons) in IT Graduate from SLIIT. Architecting elegant mobile experiences in Flutter and
+                        building
+                        scalable full-stack web applications with the MERN stack. Fusing structured logic with moody
+                        minimalism.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-premium" id="hero-btn-projects">
+                            View Featured Projects
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5"
+                                fill="none">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="./assets/Ashendra Resume.pdf" target="_blank" class="btn-outline" id="hero-btn-cv">
+                            Download CV
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5"
+                                fill="none">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn-outline" id="hero-btn-contact">Let's Connect</a>
+                    </div>
+
+                    <!-- Stats / Trust Indicators -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Coding</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">SLIIT</span>
+                            <span class="stat-label">B.Sc Hons IT Graduate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avatar Visuals -->
+                <div class="hero-visual reveal active">
+                    <div class="avatar-container" id="avatar-box">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-image-wrapper">
+                            <img src="assets\IMG_2826.JPG.jpeg" alt="Ashendra Thavaratnam Portrait" />
+                        </div>
+                        <!-- Floating decoration elements -->
+                        <div class="floating-circle circle-1"></div>
+                        <div class="floating-circle circle-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT ME SECTION -->
+        <section id="about" class="reveal">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">Fusing <span>Art & Engineering</span></h2>
+
+            <div class="about-grid">
+                <div class="about-img-box">
+                    <img src="assets\prof pic 3.png" alt="Ashendra Thavaratnam Creative View" />
+                </div>
+
+                <div class="about-details">
+                    <p class="about-text-lead">
+                        I am a passionate Full-Stack Developer and Creative Photographer, graduated with a B.Sc (Hons)
+                        in
+                        Information Technology from Sri Lanka Institute of Information Technology (SLIIT) (Sep 2022 -
+                        May 2026).
+                    </p>
+                    <p class="about-text-body">
+                        My development philosophy is centered around creating clean, performant applications that solve
+                        actual problems. With expertise stretching across web layers and deep native/cross-platform
+                        mobile systems, I build high-performance tools. Simultaneously, photography allows me to
+                        appreciate visual details, lighting composition, and minimalist layouts, which in turn
+                        influences my clean UI designs.
+                    </p>
+
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h3>Experience</h3>
+                            <p>2+ Years building frontend structures, responsive web layouts, and interactive software
+                                modules.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                                </svg>
+                            </div>
+                            <h3>Education</h3>
+                            <p>B.Sc (Hons) in Information Technology Graduate (Sep 2022 - May 2026) at SLIIT. Solid
+                                foundation in computing
+                                systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TECHNICAL SKILLS SECTION -->
+        <section id="skills" class="reveal">
+            <span class="section-tag">Technical Depth</span>
+            <h2 class="section-title">My <span>Tech Stack</span></h2>
+            <p class="skills-intro">
+                A structured overview of languages, frameworks, and tools I leverage to deliver production-grade
+                applications.
+            </p>
+
+            <div class="skills-grid">
+                <!-- Frontend skills -->
+                <div class="skills-category">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Frontend & Layout</h3>
+                    </div>
+
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">ReactJS & Javascript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Tailwind CSS</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 & CSS3 Spec</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Development skills -->
+                <div class="skills-category">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>Mobile Platforms</h3>
+                    </div>
+
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Flutter & Dart</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Kotlin (Android Native)</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="80%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React Native</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development skills -->
+                <div class="skills-category">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">
+                            <svg viewBox="0 0 24 24">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                            </svg>
+                        </div>
+                        <h3>Backend & Databases</h3>
+                    </div>
+
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python & Core logic</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">NodeJS & ExpressJS</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="82%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB & SQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-bar" data-progress="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FEATURED PROJECTS SECTION -->
+        <section id="projects" class="reveal">
+            <div class="portfolio-header-container">
+                <div>
+                    <span class="section-tag">Case Studies</span>
+                    <h2 class="section-title">Selected <span>Works</span></h2>
+                </div>
+
+                <!-- Category filtering tabs -->
+                <div class="filter-tabs" id="project-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="web">Web</button>
+                    <button class="filter-tab" data-filter="mobile">Mobile</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="mobile" id="project-card-memory">
+                    <div class="project-card-image">
+                        <img src="./assets/memory-trainer.png" alt="Adaptive Memory Trainer App Screen Mockup" />
+                        <div class="project-card-overlay">
+                            <span class="project-tag-badge">Research Project</span>
+                        </div>
+                    </div>
+                    <div class="project-card-info">
+                        <div class="project-metrics">
+                            <span class="project-metric-item">ESP32 + BLE</span>
+                            <span class="project-metric-item">ML Model Games</span>
+                            <span class="project-metric-item">Stress Prediction</span>
+                        </div>
+                        <h3>Adaptive Memory Trainer With HRV Based Stress Prediction</h3>
+                        <p>An AI-powered mobile app designed for dyslexic children, utilizing real-time heart rate
+                            variability (HRV) tracking via ESP32 to dynamically adapt cognitive memory task difficulty.
+                        </p>
+
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">BLE</span>
+                            <span class="tech-tag">Arduino</span>
+                        </div>
+
+                        <div class="project-links-footer">
+                            <a href="https://github.com/ashenrogers/Adaptive-Memory-Trainer" target="_blank"
+                                class="project-footer-link" id="link-github-memory">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://github.com/ashenrogers/Adaptive-Memory-Trainer" target="_blank"
+                                class="project-footer-link" id="link-demo-memory">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Demo
+                            </a>
+                            <button class="project-details-btn" data-project="memory" id="btn-details-memory">Case
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web" id="project-card-hotel">
+                    <div class="project-card-image">
+                        <img src="./assets/Screenshot 2025-12-14 205139.png" alt="Hotel Reservation Screen Mockup" />
+                        <div class="project-card-overlay">
+                            <span class="project-tag-badge">Web Application</span>
+                        </div>
+                    </div>
+                    <div class="project-card-info">
+                        <div class="project-metrics">
+                            <span class="project-metric-item">MERN Stack</span>
+                            <span class="project-metric-item">0.8s load</span>
+                        </div>
+                        <h3>Hotel Wedding Reservation System</h3>
+                        <p>An enterprise-grade hotel room booking and venue reservation management app developed for
+                            wedding celebrations, featuring dynamic calendar scheduling.</p>
+
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">ReactJS</span>
+                            <span class="tech-tag">NodeJS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">ExpressJS</span>
+                        </div>
+
+                        <div class="project-links-footer">
+                            <a href="https://github.com/ashenrogers/Hotel-Reservation-System" target="_blank"
+                                class="project-footer-link" id="link-github-hotel">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://github.com/ashenrogers/Hotel-Reservation-System" target="_blank"
+                                class="project-footer-link" id="link-demo-hotel">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Demo
+                            </a>
+                            <button class="project-details-btn" data-project="hotel" id="btn-details-hotel">Case
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web" id="project-card-appointment">
+                    <div class="project-card-image">
+                        <img src="assets\Screenshot 2026-06-02 153611.png"
+                            alt="Appointment Management System Screen Mockup" />
+                        <div class="project-card-overlay">
+                            <span class="project-tag-badge">Enterprise Admin</span>
+                        </div>
+                    </div>
+                    <div class="project-card-info">
+                        <div class="project-metrics">
+                            <span class="project-metric-item">Secure APIs</span>
+                            <span class="project-metric-item">Clean Arch</span>
+                        </div>
+                        <h3>Appointment Management System for Dental Clinic</h3>
+                        <p>A corporate portal designed for scheduling and tracking office consultations, linking
+                            external clients with technical specialists securely.</p>
+
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node JS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+
+                        <div class="project-links-footer">
+                            <a href="https://github.com/ashenrogers/Appointment-Management-System/" target="_blank"
+                                class="project-footer-link" id="link-github-appoint">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://github.com/ashenrogers/Appointment-Management-System/" target="_blank"
+                                class="project-footer-link" id="link-demo-appoint">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Demo
+                            </a>
+                            <button class="project-details-btn" data-project="appointment" id="btn-details-appoint">Case
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="web" id="project-card-food">
+                    <div class="project-card-image">
+                        <img src="./assets/Picture1.png" alt="Food Based Learning Platform Mockup" />
+                        <div class="project-card-overlay">
+                            <span class="project-tag-badge">EdTech / Social</span>
+                        </div>
+                    </div>
+                    <div class="project-card-info">
+                        <div class="project-metrics">
+                            <span class="project-metric-item">98% Satisfy</span>
+                            <span class="project-metric-item">Real-Time</span>
+                        </div>
+                        <h3>TasteMaster: Learning Plan Sharing</h3>
+                        <p>A collaborative culinary learning and recipe scheduling tool designed to distribute cooking
+                            plans and evaluate course progress.</p>
+
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">SpringBoot</span>
+                            <span class="tech-tag">Node JS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+
+                        <div class="project-links-footer">
+                            <a href="https://github.com/ashenrogers/PAFTasteMaster_v2" target="_blank"
+                                class="project-footer-link" id="link-github-food">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://github.com/ashenrogers/PAFTasteMaster_v2" target="_blank"
+                                class="project-footer-link" id="link-demo-food">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Demo
+                            </a>
+                            <button class="project-details-btn" data-project="food" id="btn-details-food">Case
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="mobile" id="project-card-voice">
+                    <div class="project-card-image">
+                        <img src="./assets/project-2.png" alt="Voice-Based task Manager System Screen" />
+                        <div class="project-card-overlay">
+                            <span class="project-tag-badge">AI Assistant</span>
+                        </div>
+                    </div>
+                    <div class="project-card-info">
+                        <div class="project-metrics">
+                            <span class="project-metric-item">NLP parser</span>
+                            <span class="project-metric-item">95% Accuracy</span>
+                        </div>
+                        <h3>Intelli-Task: Voice & Text Reminder</h3>
+                        <p>An intelligent scheduling assistant utilizing natural language processing (NLP) to parse
+                            vocal transcripts and structure automated event logs.</p>
+
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android SDK</span>
+                            <span class="tech-tag">Whisper API</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+
+                        <div class="project-links-footer">
+                            <a href="https://github.com/ashenrogers/Intelli-Task-Reminder" target="_blank"
+                                class="project-footer-link" id="link-github-voice">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://github.com/ashenrogers/Intelli-Task-Reminder" target="_blank"
+                                class="project-footer-link" id="link-demo-voice">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Demo
+                            </a>
+                            <button class="project-details-btn" data-project="voice" id="btn-details-voice">Case
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CASE STUDY DETAIL DRAWER (MODAL OVERLAYS) -->
+        <div class="case-study-modal" id="case-study-modal" role="dialog" aria-modal="true"
+            aria-labelledby="modal-title">
+            <div class="case-study-drawer" id="case-study-drawer">
+                <button class="modal-close-btn" id="modal-close" aria-label="Close details">
+                    <svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+
+                <span class="modal-tag" id="modal-tag">Productivity App</span>
+                <h3 class="modal-title" id="modal-title">Case Study Title</h3>
+
+                <div class="modal-meta-grid">
+                    <div class="modal-meta-item">
+                        <h5>Role</h5>
+                        <p id="modal-role">Lead Full-Stack Developer</p>
+                    </div>
+                    <div class="modal-meta-item">
+                        <h5>Timeline</h5>
+                        <p id="modal-timeline">4 Weeks</p>
+                    </div>
+                    <div class="modal-meta-item">
+                        <h5>Category</h5>
+                        <p id="modal-category">Mobile Engineering</p>
+                    </div>
+                    <div class="modal-meta-item">
+                        <h5>Platform</h5>
+                        <p id="modal-platform">iOS / Android</p>
+                    </div>
+                </div>
+
+                <div class="modal-content-section">
+                    <h4>Overview</h4>
+                    <p id="modal-overview">Detailed overview explanation of the application objectives and problems
+                        solved.</p>
+                </div>
+
+                <div class="modal-content-section">
+                    <h4>Key Challenges & Solutions</h4>
+                    <ul id="modal-challenges">
+                        <li>Challenge explanation and the architectural resolve implemented to bypass local database
+                            conflicts.</li>
+                        <li>Encryption layer logic integration keeping user credentials protected under client-side
+                            decryption.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-content-section">
+                    <h4>Key Achievements & Metrics</h4>
+                    <ul id="modal-metrics">
+                        <li>Reduced processing query cycles by 35% through database indexing.</li>
+                        <li>High accessibility rating (WCAG compliance reached).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. PROFESSIONAL EXPERIENCE TIMELINE -->
+        <section id="experience" class="reveal">
+            <span class="section-tag">Career Journey</span>
+            <h2 class="section-title">Professional <span>Milestones</span></h2>
+
+            <div class="timeline-container">
+                <div class="timeline-line-bg"></div>
+                <div class="timeline-line-progress" id="timeline-progress"></div>
+
+                <!-- Milestone 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-inner"></div>
+                    </div>
+                    <div class="timeline-date">Dec 2025 - Present</div>
+                    <div class="timeline-card">
+                        <h3>Full Stack Web Developer & Freelancer</h3>
+                        <span class="timeline-company">Independent Software Engineering</span>
+                        <p class="timeline-desc">
+                            Building dynamic client projects utilizing React, Flutter, and the MERN stack. Crafting
+                            modern responsive user interfaces, setting up continuous deployment pipelines, and managing
+                            relational and non-relational database schemas.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Implemented secure booking and authentication systems for local small businesses.</li>
+                            <li>Engineered highly responsive user experiences with optimized loading cycles under 1.5
+                                seconds.</li>
+                            <li>Contributed open-source tools for Flutter task management systems.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-inner"></div>
+                    </div>
+                    <div class="timeline-date">Dec 2024 - Dec 2025</div>
+                    <div class="timeline-card">
+                        <h3>Software Engineer Intern</h3>
+                        <span class="timeline-company">Dgateway Innovations Pvt LTD</span>
+                        <p class="timeline-desc">
+                            Contributed to the design and development of web applications and mobile solutions.
+                            Implemented
+                            responsive frontend interfaces, built clean system architectures, and integrated REST APIs.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Developed and optimized UI components using modern frontend frameworks.</li>
+                            <li>Collaborated closely with engineering teams in agile sprints to implement scalable
+                                software features.</li>
+                            <li>Participated in code reviews, bug fixes, and system performance tuning.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-inner"></div>
+                    </div>
+                    <div class="timeline-date">Sep 2022 - May 2026</div>
+                    <div class="timeline-card">
+                        <h3>B.Sc (Hons) Information Technology Graduate</h3>
+                        <span class="timeline-company">Sri Lanka Institute of Information Technology (SLIIT)</span>
+                        <p class="timeline-desc">
+                            Completed foundational computer science principles, database modeling, software architecture
+                            paradigms, network security protocols, and advanced mobile application design.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Completed collaborative group engineering tasks (TasteMaster Sharing App, Appointment
+                                Portals).</li>
+                            <li>Maintained strong academic standing in programming methodologies and core systems
+                                architecture.</li>
+                            <li>Acquired advanced skill certifications in Java, React Native, and native Android
+                                architectures.</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- 7. PHOTOGRAPHY PORTFOLIO SECTION -->
+        <section id="photography" class="reveal">
+            <span class="section-tag">Captured Moments</span>
+            <h2 class="section-title">Visual <span>Journal</span></h2>
+            <p class="photography-intro">
+                A curation of moments captured through my lens. Expressing stories via clean composition, stark lighting
+                contrasts, and dark monochrome palettes.
+            </p>
+
+            <div class="masonry-grid" id="photography-grid">
+                <!-- Photo 1 -->
+                <div class="photography-card" data-index="0" id="photo-card-1">
+                    <img src="./assets/photography/IMG_2149.JPG.jpeg" alt="Brown Fish Owl perched on a tree branch" />
+                    <div class="photography-card-overlay">
+                        <span class="photography-card-tag">Wildlife</span>
+                        <h4 class="photography-card-title">Brown Fish Owl in Repose</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photography-card" data-index="1" id="photo-card-2">
+                    <img src="./assets/photography/IMG_2159.JPG.jpeg" alt="Two spotted deer standing in the forest grass" />
+                    <div class="photography-card-overlay">
+                        <span class="photography-card-tag">Wildlife</span>
+                        <h4 class="photography-card-title">Vigilance in the Wild: Spotted Deer Pair</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photography-card" data-index="2" id="photo-card-3">
+                    <img src="./assets/photography/IMG_3252.JPG.jpeg" alt="Sri Lankan Leopard walking on a rocky ledge" />
+                    <div class="photography-card-overlay">
+                        <span class="photography-card-tag">Wildlife</span>
+                        <h4 class="photography-card-title">Shadow of the Rocks: Sri Lankan Leopard</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photography-card" data-index="3" id="photo-card-4">
+                    <img src="./assets/photography/IMG_5247.jpg" alt="Silhouette of an airplane and a bird flying in the sky" />
+                    <div class="photography-card-overlay">
+                        <span class="photography-card-tag">Minimalist</span>
+                        <h4 class="photography-card-title">Echoes of Flight</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photography-card" data-index="4" id="photo-card-5">
+                    <img src="./assets/photography/IMG_7206.JPG.jpeg" alt="Black Drongo bird perched on a wire" />
+                    <div class="photography-card-overlay">
+                        <span class="photography-card-tag">Wildlife</span>
+                        <h4 class="photography-card-title">Azure Horizon: Black Drongo</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photography-card" data-index="5" id="photo-card-6">
+                    <img src="./assets/photography/IMG_7258.JPG.jpeg" alt="Minimalist shot of the moon aligned above a silhouetted leaf" />
+                    <div class="photography-card-overlay">
+                        <span class="photography-card-tag">Minimalist</span>
+                        <h4 class="photography-card-title">Celestial Balance</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTOGRAPHY LIGHTBOX GALLERY -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photography Image Viewer">
+            <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">
+                <svg viewBox="0 0 24 24">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <button class="lightbox-nav-btn lightbox-prev-btn" id="lightbox-prev" aria-label="Previous Image">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="lightbox-content">
+                <img src="" alt="" class="lightbox-image" id="lightbox-img" />
+                <div class="lightbox-caption" id="lightbox-caption">Minimalist Concrete Geometry</div>
+            </div>
+
+            <button class="lightbox-nav-btn lightbox-next-btn" id="lightbox-next" aria-label="Next Image">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <!-- 8. CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="reveal">
+            <span class="section-tag">Credentials</span>
+            <h2 class="section-title">Certifications & <span>Recognitions</span></h2>
+
+            <div class="certs-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card" id="cert-card-1">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Web Design for Beginners</h3>
+                    <div class="cert-issuer">University of Moratuwa</div>
+                    <p class="cert-desc">Verification Code: xorKuRFXYd. Completed course covering web design principles,
+                        layout architectures, standard web styling, and responsive site structure.</p>
+                    <a href="https://open.uom.lk/verify" target="_blank" class="cert-link" id="cert-link-1">
+                        Verify Credential
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card" id="cert-card-2">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>AWS Academy Graduate</h3>
+                    <div class="cert-issuer">AWS Academy - Cloud Web Application Builder</div>
+                    <p class="cert-desc">Certified cloud practitioner. Skilled in building, scaling, and deploying
+                        multi-tier applications using AWS services and computing infrastructure.</p>
+                    <a href="https://www.credly.com/go/DqODIszb" target="_blank" class="cert-link" id="cert-link-2">
+                        Verify Credential
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card" id="cert-card-3">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Experience Letter</h3>
+                    <div class="cert-issuer">Dgateway Innovations Pvt LTD</div>
+                    <p class="cert-desc">Official verification of engineering tenure, documenting professional
+                        contributions, software development expertise, and project collaboration outcomes.</p>
+                    <a href="./assets/Dgateway Experience Letter.pdf" target="_blank" class="cert-link"
+                        id="cert-link-3">
+                        View Letter
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. CONTACT SECTION -->
+        <section id="contact" class="reveal">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-title">Let's Create <span>Together</span></h2>
+
+            <div class="contact-grid">
+                <!-- Info Panel -->
+                <div class="contact-info-panel">
+                    <p class="contact-info-lead">
+                        Have a project concept or recruiting opportunity? Shoot me a message, drop an email, or let's
+                        connect on socials. I reply within 12 hours.
+                    </p>
+
+                    <div class="contact-methods">
+                        <!-- Email -->
+                        <div class="contact-method-item">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Email</h4>
+                                <div class="contact-method-value" id="copy-email-trigger">
+                                    thavaratnamashendra@gmail.com
+                                    <span class="contact-copy-indicator" id="copy-email-indicator">Copy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="contact-method-item">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Phone</h4>
+                                <div class="contact-method-value" id="copy-phone-trigger">
+                                    0770475106
+                                    <span class="contact-copy-indicator" id="copy-phone-indicator">Copy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="contact-method-item">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Location</h4>
+                                <div class="contact-method-value" style="cursor: default;">
+                                    Vavuniya, Sri Lanka
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Socials Grid -->
+                    <div class="social-header">Connect</div>
+                    <div class="social-grid">
+                        <a href="https://www.linkedin.com/in/ashendra-thavaratnam-b04365275"
+                            target="_blank" class="social-btn" id="social-linkedin" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/ashenrogers/" target="_blank" class="social-btn" id="social-github"
+                            title="GitHub Profile" aria-label="GitHub Profile">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/ashen_rogers" target="_blank" class="social-btn" id="social-instagram"
+                            title="Instagram Personal Profile" aria-label="Instagram Personal Profile">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C8.74 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.74 24 12 24s3.667-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/clicks_of_ashen" target="_blank" class="social-btn" id="social-photography"
+                            title="Instagram Photography Page" aria-label="Instagram Photography Page">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="contact-form-card">
+                    <h3 class="contact-form-title">Send a Message</h3>
+
+                    <form id="contact-form" autocomplete="off">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="18e356e7-edf4-4c03-9cec-82c9b40f7da4" />
+
+                        <div class="form-grid">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <input type="text" id="form-name" name="name" class="form-input" placeholder=" "
+                                    required />
+                                <label for="form-name" class="form-label">Full Name</label>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <input type="email" id="form-email" name="email" class="form-input" placeholder=" "
+                                    required />
+                                <label for="form-email" class="form-label">Email Address</label>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group full-width">
+                                <input type="text" id="form-subject" name="subject" class="form-input" placeholder=" "
+                                    required />
+                                <label for="form-subject" class="form-label">Subject</label>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group full-width">
+                                <textarea id="form-message" name="message" class="form-input" placeholder=" "
+                                    required></textarea>
+                                <label for="form-message" class="form-label">Message Details</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-premium btn-form-submit" id="btn-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" style="display: none;">
+                                Sending Message...
+                                <svg class="spinner" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" style="animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-left: 8px;"><circle cx="12" cy="12" r="10"></circle><path d="M4 12a8 8 0 0 1 8-8"></path></svg>
+                            </span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5"
+                                fill="none">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Success overlay popup -->
+                    <div class="form-toast" id="form-toast">
+                        <div class="toast-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Message Dispatched!</h3>
+                        <p>Thank you. I've received your query and will connect shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <a href="#hero" class="footer-logo" id="footer-logo-link">ASHENDRA</a>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul class="footer-nav-links">
+                    <li><a href="#about" id="foot-link-about">About</a></li>
+                    <li><a href="#skills" id="foot-link-skills">Skills</a></li>
+                    <li><a href="#projects" id="foot-link-projects">Projects</a></li>
+                    <li><a href="#experience" id="foot-link-experience">Experience</a></li>
+                    <li><a href="#photography" id="foot-link-photography">Photography</a></li>
+                    <li><a href="#achievements" id="foot-link-achievements">Achievements</a></li>
+                    <li><a href="#contact" id="foot-link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <p class="footer-copyright">
+                Copyright &copy; 2026 Ashendra Thavaratnam. All Rights Reserved. Crafted with pure minimal engineering.
+            </p>
+        </div>
+    </footer>
+
+    <!-- GLOBAL TOAST NOTIFIER -->
+    <div class="global-toast" id="global-toast">
+        <div class="global-toast-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+        </div>
+        <div class="global-toast-text" id="global-toast-msg">Text copied to clipboard</div>
+    </div>
+
+    <!-- JAVASCRIPT ACTIONS -->
+    <script src="script.js?v=1.0.2"></script>
+</body>
+
+</html>
