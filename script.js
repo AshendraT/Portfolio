@@ -139,10 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* 6. TYPEWRITER HEADING EFFECT */
   const typewriter = document.getElementById("typewriter");
   const roles = [
+    "Founder & CEO at Ensoftics",
     "Software Engineer",
     "Full-Stack Developer",
-    "AI/ML Enthusiast",
-    "Flutter Specialist",
+    "SLIIT IT Graduate",
+    "Flutter & Next.js Specialist",
     "Creative Photographer"
   ];
   
@@ -262,22 +263,22 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     appointment: {
-      tag: "Corporate scheduling",
-      title: "Appointment Management Portal",
-      role: "Backend System Engineer",
-      timeline: "5 Weeks",
-      category: "Enterprise System",
-      platform: "Internal Office Web Hub",
-      overview: "A high-security scheduling framework built for enterprise consulting groups. It bridges external clients with internal technical specialists based on credentials and calendar availability.",
+      tag: "Live Healthcare Web App",
+      title: "The Dental Avenue — Premium Dental Clinic & Appointment Portal",
+      role: "Full-Stack Software Architect",
+      timeline: "Live Production Web App",
+      category: "Healthcare Application",
+      platform: "React, Node.js, Tailwind CSS, MongoDB, Web Hub",
+      overview: "The Dental Avenue (https://www.thedentalavenue.lk/) is a live dental clinic portal and online appointment management system. It enables patients to explore premium dental services, book specialist consultations in real time, and manage treatment schedules seamlessly.",
       challenges: [
-        "Structuring relational databases containing complex join procedures (MySQL) to extract empty timeslots.",
-        "Ensuring complete data transaction safety (ACID compliance) during simultaneous slot bookings.",
-        "Integrating JWT access protocols across multiple client sub-domains."
+        "Developing real-time consultation slot booking algorithms to avoid calendar double-booking across multiple specialist doctors.",
+        "Structuring a clean, modern user interface optimized for fast patient onboarding and mobile responsiveness.",
+        "Ensuring data security and HIPAA-compliant patient communication pipelines."
       ],
       metrics: [
-        "Safely executed 15,000+ consult reservations with zero transaction errors.",
-        "Increased employee dispatch efficiency metrics by 35%.",
-        "Decreased system query latency by 50% using optimized Hibernate mappings."
+        "Live web platform accessible at https://www.thedentalavenue.lk/",
+        "Significantly reduced patient appointment scheduling latency.",
+        "Delivered a 99.9% uptime healthcare booking portal."
       ]
     },
     food: {
@@ -299,23 +300,23 @@ document.addEventListener("DOMContentLoaded", () => {
         "Optimized image asset sizes by 65% through auto-compression algorithms."
       ]
     },
-    voice: {
-      tag: "Artificial Intelligence & Helpers",
-      title: "Intelli-Task Assistant",
-      role: "AI & Android Native Developer",
-      timeline: "6 Weeks",
-      category: "Mobile Application",
-      platform: "Native Android (Kotlin)",
-      overview: "An automated voice-first reminder assistant. It utilizes speech-to-text parsers to log tasks, categorize priority tags, and announce system schedules audibly.",
+    medmix: {
+      tag: "Live Production Web App (UK)",
+      title: "Medmix Careers — NHS & Healthcare Career Coaching Platform",
+      role: "Founder & Lead Full-Stack Architect (Ensoftics)",
+      timeline: "Live Production Application",
+      category: "Full-Stack Web Platform",
+      platform: "Next.js, React, TypeScript, Tailwind CSS, Node.js",
+      overview: "Medmix Careers (https://www.medmixcareers.co.uk/) is a live UK healthcare career coaching and mentorship platform designed for international medical professionals, doctors, and nurses aiming to join the NHS. Built with Next.js and high-performance frontend architecture, it features custom appointment scheduling, service package tiers, CV & application review workflows, and interactive interview prep modules.",
       challenges: [
-        "Building offline natural language parsing (NLP) to structure sentences into date/title parameters.",
-        "Integrating Android native TTS (Text-to-Speech) engines with high-quality phonetic accuracy.",
-        "Managing background workers to trigger alarms accurately even in OS Doze mode."
+        "Engineering a high-performance Next.js SSR/SSG architecture optimized for ultra-fast page load times under 1.0s and high SEO rankings across NHS career keywords.",
+        "Designing an intuitive, conversion-focused user interface for package selections, cart management, and online consultation bookings.",
+        "Structuring responsive layouts, accessible navigation, and rich animated sections across desktop and mobile devices."
       ],
       metrics: [
-        "Reached a 95% accuracy score during task parsing tests with diverse vocal accents.",
-        "Announced schedules within 100ms of system trigger timestamps.",
-        "Achieved positive client adoption reviews during academic showcase programs."
+        "Successfully launched live web app deployed and operational at https://www.medmixcareers.co.uk/",
+        "Top performance, SEO, and accessibility scores across lighthouse benchmarks.",
+        "Streamlined client onboarding with integrated consultation booking and package scheduling."
       ]
     }
   };
@@ -341,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (projectId === "hotel") data = caseStudies.hotel;
     else if (projectId === "appointment") data = caseStudies.appointment;
     else if (projectId === "food") data = caseStudies.food;
-    else if (projectId === "voice") data = caseStudies.voice;
+    else if (projectId === "medmix" || projectId === "voice") data = caseStudies.medmix;
 
     if (!data) return;
 
