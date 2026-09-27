@@ -1,6 +1,6 @@
 # Personal Portfolio | Ashendra Thavaratnam
 
-Welcome to my personal portfolio repository. This website showcases my journey as a Software Engineer, Full-Stack Developer, AI/ML enthusiast, and Creative Photographer. 
+Welcome to my personal portfolio repository. This website showcases my journey as a Software Engineer, Founder & CEO at Ensoftics, B.Sc (Hons) in IT Graduate from SLIIT, and Creative Photographer. 
 
 The live site is built with a sleek, dark glassmorphic design, subtle micro-animations, and responsive layouts.
 
@@ -10,22 +10,23 @@ The live site is built with a sleek, dark glassmorphic design, subtle micro-anim
 
 *   **Premium Dark Glassmorphism**: Interactive background grid overlay, neon radial glowing mouse tracker, and smooth hover effects.
 *   **Curated Projects Showcase**:
-    *   **Adaptive Memory Trainer**: My final year research project using Flutter, Flask, MongoDB, TensorFlow, and BLE to assist dyslexic children by dynamically adjusting task difficulty using real-time heart rate variability (HRV) stress prediction from an ESP32 + MAX30102 sensor.
+    *   **MEDmix Careers UK**: Production live UK web application (https://www.medmixcareers.co.uk/) providing personalized NHS career coaching, application guidance, and interview prep.
+    *   **The Dental Avenue**: Production live healthcare portal & dental consultation booking system (https://www.thedentalavenue.lk/).
+    *   **Adaptive Memory Trainer**: Final year research project using Flutter, Flask, MongoDB, TensorFlow, and BLE to assist dyslexic children by dynamically adjusting task difficulty using real-time heart rate variability (HRV) stress prediction from an ESP32 + MAX30102 sensor.
     *   **Hotel Wedding Reservation System**: Enterprise-grade hotel wedding booking platform utilizing the MERN stack.
-    *   **Appointment Management System**: High-security dental clinic specialist scheduling hub.
     *   **TasteMaster Sharing Portal**: Social culinary sharing app utilizing Spring Boot and MongoDB.
-    *   **Intelli-Task Assistant**: Voice-first task planner built natively in Kotlin with Whisper API parsing.
 *   **Case Details Modal Overlay**: Interactive, animated slide-out drawer containing key overview summaries, core challenges solved, and metric ratings.
-*   **Web3Forms Contact Integration**: Fully functional contact form forwarding messages to my email without any server backend.
-*   **Photography Masonry Grid**: stark lighting compositions, monochrome palettes, and minimalist captures.
+*   **Web3Forms Contact Integration**: Fully functional contact form forwarding messages directly asynchronously.
+*   **Photography Masonry Grid**: Stark lighting compositions, monochrome palettes, and minimalist captures.
 
 ---
 
 ## 🛠️ Tech Stack
 
-*   **Frontend**: HTML5, CSS3 Spec, Javascript (ES6+)
-*   **Design Tokens**: Custom CSS Custom Properties (Variables), Google Fonts (*Plus Jakarta Sans, Inter, Space Mono*)
-*   **Integrations**: Web3Forms API, Bluetooth Low Energy (BLE) hardware triggers, TensorFlow ML models
+*   **Engineering Leadership**: Founder & CEO at **Ensoftics**
+*   **Education**: B.Sc (Hons) in IT Graduate from **SLIIT**
+*   **Frontend & Web**: Next.js, React, Tailwind CSS, HTML5, CSS3 Spec, Javascript (ES6+)
+*   **Mobile & IoT**: Flutter, Dart, Kotlin, Android SDK, ESP32 BLE, TensorFlow ML models
 
 ---
 
